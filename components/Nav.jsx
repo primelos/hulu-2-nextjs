@@ -1,5 +1,5 @@
 import React from "react";
-import request from "../utils/requests";
+import { data } from "../utils/requests";
 import { useRouter } from "next/router";
 
 const Nav = () => {
@@ -7,11 +7,11 @@ const Nav = () => {
   return (
     <nav className="relative">
       <div className=" flex px-10 sm:px-20 text:2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide ">
-        {Object.entries(request).map(([key, { title, url }]) => (
+        {Object.entries(data).map(([key, { title, url }]) => (
           <h2
             key={key}
             className="last:pr-24 cursor-pointer transistion duration-100 transform hover:scale-125 hover:text-white active:text-red-500"
-            onClick={() => router.push(`/?genre=${key}`)}
+            onClick={() => router.push(`/?genres=${key}`)}
           >
             {title}
           </h2>

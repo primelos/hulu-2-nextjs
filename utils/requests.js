@@ -1,6 +1,6 @@
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
-export default {
+export const data = {
   fetchTrending: {
     title: "Trending",
     url: `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}&language=en-US`,
